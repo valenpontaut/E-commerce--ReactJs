@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <NavBar/>
-      <ItemListContainer greeting="Prop greeting desde App.jsx a ItemListContainer.jsx"/>
+      <ItemListContainer greeting="Prop greeting from App.jsx to ItemListContainer.jsx"/>
     </>
   )
 }

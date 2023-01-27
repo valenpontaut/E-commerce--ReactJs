@@ -26,7 +26,7 @@ const NavBar = () => {
             <Stack direction='row' spacing={9} align='center'>
               <Menu>
               <MenuButton as={Button} rightIcon={<ChevronDownIcon />} bg='#B3AF8F'>
-                Nuestros productos
+                Our products
               </MenuButton>
               <MenuList>
                 <a href="#"><MenuItem>CD's</MenuItem></a>
@@ -37,17 +37,17 @@ const NavBar = () => {
               </Menu>
               <a href="#">
                 <Button className="NavBar_btn-categories" bg='#B3AF8F' variant='solid'>
-                  ¿Dónde encontrarnos?
+                  Where to find us?
                 </Button>
               </a>
               <a href="#">
                 <Button className="NavBar_btn-categories" bg='#B3AF8F' variant='solid'>
-                  ¿Quiénes somos?
+                  About us
                 </Button>
               </a>
               <a href="#">
                 <Button className="NavBar_btn-categories" bg='#B3AF8F' variant='solid'>
-                  Contáctanos
+                  Contact us
                 </Button>
               </a>
             </Stack>
