@@ -30,9 +30,9 @@ const NavBar = () => {
               </MenuButton>
               <MenuList>
                 <a href="#"><MenuItem>CD's</MenuItem></a>
-                <a href="#"><MenuItem>Vinilos</MenuItem></a>
+                <a href="#"><MenuItem>Vinyls</MenuItem></a>
                 <a href="#"><MenuItem>DVD's</MenuItem></a>
-                <a href="#"><MenuItem>Libros</MenuItem></a>
+                <a href="#"><MenuItem>Books</MenuItem></a>
               </MenuList>
               </Menu>
               <a href="#">
