@@ -37,7 +37,7 @@ const NavBar = () => {
               </Menu>
               <a href="#">
                 <Button className="NavBar_btn-categories" bg='#B3AF8F' variant='solid'>
-                  Where to find us?
+                  Where to find us
                 </Button>
               </a>
               <a href="#">
