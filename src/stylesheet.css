@@ -1,0 +1,37 @@
+.NavBar_box-title {
+    font-family: 'Mukta', sans-serif;
+    color: white;
+    font-size: 3.5rem;
+} 
+#navbar__cartWidget {
+    font-size: 2.5rem;
+    color: #66999B;
+}
+.font-link {
+    font-family: 'Solitreo', cursive;
+    color: #66999B;
+}
+.body__Container{
+    height: calc(100vh - 91px - 88px);
+}
+.item__card{
+    height: 36rem;
+    width: 15rem;
+}
+.item__card__image{
+    height: 15rem;
+    width: 15rem;
+}
+.item__card__headingName{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+.item__card__headingArtist{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.item__oopsText{
+    font-size: 1.5rem;
+    text-align: center;
+}
+  

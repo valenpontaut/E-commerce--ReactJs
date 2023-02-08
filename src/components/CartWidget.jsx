@@ -3,7 +3,7 @@ import React from 'react'
 const CartWidget = () => {
   return (
     <>
-      <span className="material-symbols-outlined">shopping_cart</span>
+      <span className="material-symbols-outlined" id='navbar__cartWidget'>shopping_cart</span>
     </>
   )
 }
