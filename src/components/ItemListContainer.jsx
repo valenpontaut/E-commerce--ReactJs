@@ -2,42 +2,11 @@ import { Container } from '@chakra-ui/react'
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
+import music from '../music.json'
 
 const ItemListContainer = () => {
   const category = useParams();
-  const music = [
-    {
-      id: 1,
-      name: 'Unlimited Love',
-      artist: 'Red Hot Chili Peppers',
-      price: 17490,
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, magnam voluptatum sequi deserunt consequuntur vitae aut ex, doloribus quia mollitia nisi? Vitae voluptatum molestiae pariatur repudiandae neque repellendus minima natus.',
-      stock: 2,
-      category: 'Vinyl',
-      img: '/src/img/rhcp-unlimitedLove.jpg'
-    },
-    {
-      id: 2,
-      name: 'The Dark Side Of The Moon',
-      artist:'Pink Floyd',
-      price: 4949,
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, magnam voluptatum sequi deserunt consequuntur vitae aut ex, doloribus quia mollitia nisi? Vitae voluptatum molestiae pariatur repudiandae neque repellendus minima natus.',
-      stock: 3,
-      category: 'CD',
-      img: '/src/img/pinkFloyd-theDarkSideOfTheMoon.png'
-    },
-    {
-      id: 3,
-      name: 'Mothership',
-      artist: 'Led Zeppelin',
-      price: 3900,
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, magnam voluptatum sequi deserunt consequuntur vitae aut ex, doloribus quia mollitia nisi? Vitae voluptatum molestiae pariatur repudiandae neque repellendus minima natus.',
-      stock: 1,
-      category: 'CD',
-      img: '/src/img/ledZeppelin-mothership.jpg'
-    }
-  ]
-
+  
   /*async function fetchingData() {
     try{
       const dataFetched = await getData();
@@ -46,6 +15,24 @@ const ItemListContainer = () => {
     }
   }
   fetchingData();*/
+
+  const showProducts = new Promise((resolve, reject) => {
+    if (music.length > 0) {
+      setTimeout(() => {
+        resolve(music);
+      }, 2000);
+    } else {
+      reject("No products were found")
+    }
+  })
+
+  showProducts
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
   if (category.id === undefined) {
     return (

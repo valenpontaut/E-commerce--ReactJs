@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Stack, Card, CardHeader, CardBody, CardFooter, Heading, Divider, ButtonGroup, Button, Text, Center, Image } from '@chakra-ui/react'
 import ItemCount from './ItemCount'
+import { NavLink, Link} from "react-router-dom"
 
 const Item = ({id, name, artist, decription, price, stock, category, img}) => {
   return (
@@ -33,9 +34,12 @@ const Item = ({id, name, artist, decription, price, stock, category, img}) => {
             </Button>
           </ButtonGroup>
         </CardFooter>
-        <Button bg='#B3AF8F' borderRadius={'0'}>
+        <NavLink to={`/item/${id}`}>
+          <Button bg='#B3AF8F' borderRadius={'0'}>
             Details
-        </Button>
+          </Button>
+        </NavLink>
+        
       </Card>
     </Container>
     
