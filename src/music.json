@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Unlimited Love",
+        "artist": "Red Hot Chili Peppers",
+        "price": 17490,
+        "description": "Lorem",
+        "stock": 2,
+        "category": "Vinyl",
+        "img": "/src/img/rhcp-unlimitedLove.jpg"
+    },
+    {
+        "id": 2,
+        "name": "The Dark Side Of The Moon",
+        "artist":"Pink Floyd",
+        "price": 4949,
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, magnam voluptatum sequi deserunt consequuntur vitae aut ex, doloribus quia mollitia nisi? Vitae voluptatum molestiae pariatur repudiandae neque repellendus minima natus.",
+        "stock": 3,
+        "category": "CD",
+        "img": "/src/img/pinkFloyd-theDarkSideOfTheMoon.png"
+    },
+    {
+        "id": 3,
+        "name": "Mothership",
+        "artist": "Led Zeppelin",
+        "price": 3900,
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, magnam voluptatum sequi deserunt consequuntur vitae aut ex, doloribus quia mollitia nisi? Vitae voluptatum molestiae pariatur repudiandae neque repellendus minima natus.",
+        "stock": 1,
+        "category": "CD",
+        "img": "/src/img/ledZeppelin-mothership.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Lámina Once",
+        "artist": "Cuarteto de Nos",
+        "price": 4860,
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, magnam voluptatum sequi deserunt consequuntur vitae aut ex, doloribus quia mollitia nisi? Vitae voluptatum molestiae pariatur repudiandae neque repellendus minima natus.",
+        "stock": 6,
+        "category": "CD",
+        "img": "/src/img/cuartetoDeNos-laminaOnce.png"
+    }
+]
