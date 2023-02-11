@@ -4,7 +4,7 @@
         "name": "Unlimited Love",
         "artist": "Red Hot Chili Peppers",
         "price": 17490,
-        "description": "Lorem",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, magnam voluptatum sequi deserunt consequuntur vitae aut ex, doloribus quia mollitia nisi? Vitae voluptatum molestiae pariatur repudiandae neque repellendus minima natus.",
         "stock": 2,
         "category": "Vinyl",
         "img": "/src/img/rhcp-unlimitedLove.jpg"
@@ -38,5 +38,15 @@
         "stock": 6,
         "category": "CD",
         "img": "/src/img/cuartetoDeNos-laminaOnce.png"
+    },
+    {
+        "id": 5,
+        "name": "Bohemian Rhapsody",
+        "artist": "Freddie Mercury",
+        "price": 6112,
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, magnam voluptatum sequi deserunt consequuntur vitae aut ex, doloribus quia mollitia nisi? Vitae voluptatum molestiae pariatur repudiandae neque repellendus minima natus.",
+        "stock": 5,
+        "category": "DVD",
+        "img": "/src/img/freddieMercury-bohemianRhapsody.png"
     }
 ]
