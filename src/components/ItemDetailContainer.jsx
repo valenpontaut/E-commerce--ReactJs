@@ -1,3 +1,5 @@
+/*The ItemDetailContainer component takes from the database the info of the selected product to send it to the ItemDetail component*/
+
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import music from '../music.json'
@@ -31,7 +33,16 @@ const ItemDetailContainer = () => {
 
   return (
     <Container className='body__Container'>
-      <ItemDetail item={item}/>
+      <ItemDetail 
+        key={item.id}
+        id={item.id}
+        name={item.name}
+        artist={item.artist}
+        description={item.description}
+        price={item.price}
+        stock={item.stock}
+        category={item.category}
+        img={item.img}/>
     </Container>
   )
 }
