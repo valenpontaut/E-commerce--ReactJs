@@ -18,3 +18,5 @@ Para esta segunda pre-entrega se cumplió con las siguientes consignas:<br>
   - ´/´ navega a ItemListContainer
   - ´/category/:id´ navega a ItemListContainer
   - ´/item/:id´ navega a ItemDetailContainer
+
+![gif](/src/Myousic-Google-Chrome-2023-02-11-13-30-41.gif)
