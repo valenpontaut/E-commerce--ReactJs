@@ -27,6 +27,11 @@ const NavBar = () => {
             </Box>
             <Spacer/>
             <Stack direction='row' spacing={9} align='center'>
+              <Link to={`/`}>
+                <Button className="NavBar_btn-categories" bg='#B3AF8F' variant='solid'>
+                  Home
+                </Button>
+              </Link>
               <Menu>
                 <MenuButton as={Button} rightIcon={<ChevronDownIcon />} bg='#B3AF8F'>
                   Our products
