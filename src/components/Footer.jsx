@@ -1,3 +1,5 @@
+/*The Footer component is the footer of the page*/
+
 import {
     Box,
     Container,

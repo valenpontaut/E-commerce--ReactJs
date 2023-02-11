@@ -1,3 +1,5 @@
+/*The CartWidget component is the cart icon in the navbar placed at the top-right*/
+
 import React from 'react'
 
 const CartWidget = () => {

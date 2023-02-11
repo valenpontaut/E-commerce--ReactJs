@@ -1,3 +1,5 @@
+/*The ItemListContainer component takes from the database the info of the selected category to send it to the ItemList component*/
+
 import { Container } from '@chakra-ui/react'
 import React from 'react'
 import { useParams } from 'react-router-dom'
@@ -6,7 +8,6 @@ import music from '../music.json'
 
 const ItemListContainer = () => {
   const category = useParams();
-  
   /*async function fetchingData() {
     try{
       const dataFetched = await getData();
@@ -25,7 +26,6 @@ const ItemListContainer = () => {
       reject("No products were found")
     }
   })
-
   showProducts
   .then((result) => {
     console.log(result);
@@ -58,17 +58,17 @@ const ItemListContainer = () => {
 export default ItemListContainer
 
 /*<Container bg='#0D1821' color='white'>
-        Color 1
-      </Container>
-      <Container bg='#2B3A67' color='white'>
-        Color 2
-      </Container>
-      <Container bg='#496A81' color='white'>
-        Color 3
-      </Container>
-      <Container bg='#66999B' color='white'>
-        Color 4
-      </Container>
-      <Container bg='#B3AF8F' color='white'>
-        Color 5
-      </Container>*/
+    Color 1
+  </Container>
+  <Container bg='#2B3A67' color='white'>
+    Color 2
+  </Container>
+  <Container bg='#496A81' color='white'>
+    Color 3
+  </Container>
+  <Container bg='#66999B' color='white'>
+    Color 4
+  </Container>
+  <Container bg='#B3AF8F' color='white'>
+    Color 5
+  </Container>*/
