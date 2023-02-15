@@ -7,32 +7,36 @@ import ItemList from './ItemList'
 import music from '../music.json'
 
 const ItemListContainer = () => {
+
   const category = useParams();
-  /*async function fetchingData() {
+
+  const getData = () => {
+    const showProducts = new Promise((resolve, reject) => {
+      if (music.length > 0) {
+        setTimeout(() => {
+          resolve(music);
+        }, 2000);
+      } else {
+        reject("No products were found")
+      }
+    })
+    showProducts
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }  
+
+  async function fetchingData() {
     try{
       const dataFetched = await getData();
     } catch (err) {
       console.log(err);
     }
   }
-  fetchingData();*/
-
-  const showProducts = new Promise((resolve, reject) => {
-    if (music.length > 0) {
-      setTimeout(() => {
-        resolve(music);
-      }, 2000);
-    } else {
-      reject("No products were found")
-    }
-  })
-  showProducts
-  .then((result) => {
-    console.log(result);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+  fetchingData();
 
   if (category.id === undefined) {
     return (
@@ -42,7 +46,6 @@ const ItemListContainer = () => {
     )
   } else {
     const catFilter = music.filter((mus) => mus.category === category.id);
-    console.log(catFilter);
     return (
       <>
       <Container className='body__Container'>
