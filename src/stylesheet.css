@@ -7,6 +7,10 @@
     font-size: 2.5rem;
     color: #66999B;
 }
+.navbar__cartWidget__counter {
+    font-size: 1.4rem;
+    color: #66999B;
+}
 .font-link {
     font-family: 'Solitreo', cursive;
     color: #66999B;
@@ -17,7 +21,7 @@
     padding: 0;
 }
 .item__card{
-    height: 36rem;
+    height: 32rem;
     width: 15rem;
 }
 .item__card__image{
@@ -61,4 +65,37 @@
 } 
 .itemDetail__card__description{
     text-align: justify;
+}
+.itemCount__boxBtns{
+    display: flex;
+    flex-direction: column;
+}
+.itemCount__boxCounterAndAddCart{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cartItem__div{
+    display: flex;
+    justify-content: center;
+}
+.cartItem__card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70rem;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgb(210, 210, 210);
+    margin: 10px;
+
+}
+.cartItem__card__leftBox, .cartItem__card__rightBox{
+    display: flex;
+    align-items: center;
+}
+.cartItem__card__img{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 20px;
+    padding: 0.5rem;
 }
