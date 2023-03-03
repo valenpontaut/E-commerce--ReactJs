@@ -28,12 +28,12 @@ const NavBar = () => {
             <Spacer/>
             <Stack direction='row' spacing={9} align='center'>
               <Link to={`/`}>
-                <Button className="NavBar_btn-categories" bg='#B3AF8F' variant='solid'>
+                <Button className="NavBar_btn-categories" bg='#B3AF8F' variant='solid' w={'10rem'}>
                   Home
                 </Button>
               </Link>
               <Menu>
-                <MenuButton as={Button} rightIcon={<ChevronDownIcon />} bg='#B3AF8F'>
+                <MenuButton as={Button} rightIcon={<ChevronDownIcon />} bg='#B3AF8F' w={'10rem'}>
                   Our products
                 </MenuButton>
                 <MenuList>
@@ -44,17 +44,17 @@ const NavBar = () => {
                 </MenuList>
               </Menu>
               <Link to={`/findUs`}>
-                <Button className="NavBar_btn-categories" bg='#B3AF8F' variant='solid'>
+                <Button className="NavBar_btn-categories" bg='#B3AF8F' variant='solid' w={'10rem'}>
                   Where to find us
                 </Button>
               </Link>
               <Link to={`/aboutUs`}>
-                <Button className="NavBar_btn-categories" bg='#B3AF8F' variant='solid'>
+                <Button className="NavBar_btn-categories" bg='#B3AF8F' variant='solid' w={'10rem'}>
                   About us
                 </Button>
               </Link>
               <Link to={`/contactUs`}>
-                <Button className="NavBar_btn-categories" bg='#B3AF8F' variant='solid'>
+                <Button className="NavBar_btn-categories" bg='#B3AF8F' variant='solid' w={'10rem'}>
                   Contact us
                 </Button>
               </Link>
