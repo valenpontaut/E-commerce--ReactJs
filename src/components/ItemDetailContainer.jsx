@@ -33,7 +33,8 @@ const ItemDetailContainer = () => {
 
   return (
     <Container className='body__Container'>
-      <ItemDetail 
+      <ItemDetail
+        item={item} 
         key={item.id}
         id={item.id}
         name={item.name}
