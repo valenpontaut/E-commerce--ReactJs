@@ -6,32 +6,14 @@ import {
   Stack, 
   Card,  
   CardBody, 
-  CardFooter, 
-  Divider, 
-  ButtonGroup, 
   Button, 
   Text,  
-  Image, 
-  useToast 
+  Image,
 } from '@chakra-ui/react'
-import ItemCount from './ItemCount'
-import {NavLink, Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 
-const Item = ({id, name, artist, decription, price, stock, category, img}) => {
-  const toast = useToast()
-  const idToast = 'cartWidgetId'
-  const showSuccess = (message) => {
-    if (!toast.isActive(idToast)) {
-      toast({
-        idToast,
-        title: message,
-        position: 'bottom',
-        status: 'success',
-        isClosable: true,
-        duration: 2000
-      })
-    }
-  }
+const Item = ({id, name, artist, price, category, img}) => {
+  
   return (
     <Container className='body__Container'>  
       <Card className='item__card' mt={'5'}>
@@ -49,18 +31,9 @@ const Item = ({id, name, artist, decription, price, stock, category, img}) => {
             </Text>
           </Stack>
         </CardBody>
-        <Divider />
-        <CardFooter>
-          <ButtonGroup spacing='2'>
-            <ItemCount w={'6rem'} stock={stock}/>
-            <Button _hover={{ bg: '#2B3A67' }} bg='#2B3A67' color='white' w={'6rem'} onClick={()=>showSuccess('Product succesfully added to cart')}>
-            <span className="material-symbols-outlined" >shopping_cart</span>
-            </Button>
-          </ButtonGroup>
-        </CardFooter>
         <NavLink to={`/item/${id}`}>
-          <Button  bg='#B3AF8F' borderRadius={'0'} w={'15rem'}>
-            Details
+          <Button  bg='#B3AF8F' color={'#645537'} fontSize={'1.2rem'} borderRadius={'0'} w={'15rem'} h={'3.5rem'}>
+            + Details
           </Button>
         </NavLink>
       </Card>
