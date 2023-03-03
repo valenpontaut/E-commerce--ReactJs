@@ -1,37 +1,26 @@
 /*The ItemDetail component is a card of the selected product details*/
 
-import React from 'react'
 import { 
   Container, 
   Stack, 
   Card, 
   CardBody, 
   ButtonGroup, 
-  Button, 
   Text, 
-  Image, 
-  useToast 
+  Image
 } from '@chakra-ui/react'
 import ItemCount from './ItemCount'
+import { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
 
-const ItemDetail = ({name, artist, description, price, stock, category, img}) => {
-  const toast = useToast()
-  const id = 'cartWidgetId'
-  const showSuccess = (message) => {
-    if (!toast.isActive(id)) {
-      toast({
-        id,
-        title: message,
-        position: 'bottom',
-        status: 'success',
-        isClosable: true,
-        duration: 2000
-      })
-    }
+const ItemDetail = ({item, id, name, artist, description, price, stock, category, img}) => {
+  const {addItem} = useContext(CartContext)
+  const onAdd = (amount) => {
+    addItem(item, amount);
   }
   return (
-    <Container className='itemDetail__container' >  
-      <Card  mt={'5'} 
+    <Container className='itemDetail__container' p={'4rem'}>  
+      <Card 
         direction={{ base: 'column', sm: 'row' }}
         overflow='hidden'
         variant='outline'
@@ -48,16 +37,7 @@ const ItemDetail = ({name, artist, description, price, stock, category, img}) =>
         </Stack>
       </Card>
       <ButtonGroup spacing='8' pt={5}>
-        <ItemCount w={'15rem'} stock={stock}/>
-        <Button 
-          _hover={{ bg: '#2B3A67' }}  
-          bg='#2B3A67' 
-          color='white' 
-          w={'15rem'} 
-          onClick={()=>showSuccess('Product succesfully added to cart')}>
-          <Text pr={2}>Add to cart</Text>   
-          <span className="material-symbols-outlined">shopping_cart</span>
-        </Button>
+        <ItemCount w={'15rem'} stock={stock} idItem={id} onAdd={onAdd}/>
       </ButtonGroup>
     </Container>
   )
