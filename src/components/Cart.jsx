@@ -3,6 +3,7 @@
 import { Container, Box, Center, Image, Text, AbsoluteCenter, Button } from '@chakra-ui/react'
 import { useContext } from 'react'
 import { CartContext } from "../context/CartContext"
+import { Link } from 'react-router-dom';
 import CartItem from './CartItem'
 
 const Cart = () => {
@@ -10,8 +11,9 @@ const Cart = () => {
   if (totalItems() === 0){
     return (
       <Container className='body__Container'>
-      <Center><Image src='/src/img/oops.jpg'></Image></Center>
-      <Center><Text className='item__oopsText'>Looks like you haven't added any products yet</Text></Center>
+      <Center><Image src='/src/img/empty-cart.png'></Image></Center>
+      <Center><Text className='item__oopsText'>Looks like you haven't added any products yet. Let's go buy something!</Text></Center>
+      <Center><Link to={`/`}><Button mt={'5'} bg='#66999B' _hover={{ bg: '#496A81' }}>Shop Now</Button></Link></Center>
       </Container>
     )
   } else {
