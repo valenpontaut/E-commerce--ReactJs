@@ -4,8 +4,8 @@ import React from 'react'
 import Item from './Item'
 import { Flex, Center, Text, Image } from '@chakra-ui/react'
 
-const ItemList = ({music}) => {
-  if (music.length === 0) {
+const ItemList = ({products}) => {
+  if (products.length === 0) {
     return (
       <>
       <Center><Image src='/src/img/oops.jpg'></Image></Center>
@@ -16,17 +16,17 @@ const ItemList = ({music}) => {
     return (
         <Center>        
           <Flex>
-            {music.map((mus)=>(
+            {products?.map((prod)=>(
               <Item
-                key={mus.id}
-                id={mus.id}
-                name={mus.name}
-                artist={mus.artist}
-                description={mus.description}
-                price={mus.price}
-                stock={mus.stock}
-                category={mus.category}
-                img={mus.img}
+                key={prod.id}
+                id={prod.id}
+                name={prod.name}
+                artist={prod.artist}
+                description={prod.description}
+                price={prod.price}
+                stock={prod.stock}
+                category={prod.category}
+                img={prod.img}
               />
             ))}
           </Flex>            

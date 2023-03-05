@@ -1,13 +1,19 @@
 /*The Cart component is where all the products added to cart live*/
 
 import { Container, Box, Center, Image, Text, AbsoluteCenter, Button } from '@chakra-ui/react'
-import { useContext } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { CartContext } from "../context/CartContext"
 import { Link } from 'react-router-dom';
-import CartItem from './CartItem'
+import CartItem from './CartItem';
+import Loading from './Loading';
+import FinishPurchase from './FinishPurchase';
 
 const Cart = () => {
   const {cart, clear, totalItems, totalPrice, remove} = useContext(CartContext)
+  const [loading, setLoading] = useState(true);
+  const finishPurchase = () => {
+    return (<>{loading?<Loading setLoading={setLoading}/>:<FinishPurchase/>}</>)
+  }
   if (totalItems() === 0){
     return (
       <Container className='body__Container'>
@@ -20,7 +26,7 @@ const Cart = () => {
     return (
       <div className='body__Container'>
         <div>
-          {cart.map((item)=>(
+          {cart?.map((item)=>(
             <CartItem 
               item={item}
               key={item.id}
@@ -40,6 +46,7 @@ const Cart = () => {
         <div>
           <Text>Total: ${totalPrice()}</Text>
           <Button onClick={() => clear()}>Clear cart</Button>
+          <Button onClick={() => finishPurchase()}>Finish my purchase</Button>
         </div>
       </div>
     )
