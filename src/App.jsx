@@ -8,6 +8,7 @@ import CartContextProvider from './context/CartContext';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import FindUs from './components/FindUs';
+import FinishPurchase from './components/FinishPurchase';
 
 function App() {
   return (
@@ -17,12 +18,13 @@ function App() {
       <NavBar/>
       <Routes>
         <Route exact path='/' element={<ItemListContainer/>}/>
-        <Route exact path='/category/:id' element={<ItemListContainer/>}/>
+        <Route exact path='/category/:category' element={<ItemListContainer/>}/>
         <Route exact path='/item/:id' element={<ItemDetailContainer/>}/>
         <Route exact path='/cart' element={<Cart/>}/>
         <Route exact path='/aboutus' element={<AboutUs/>}/>
         <Route exact path='/contactus' element={<ContactUs/>}/>
         <Route exact path='/findus' element={<FindUs/>}/>
+        <Route exact path='/finishPurchase' element={<FinishPurchase/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
