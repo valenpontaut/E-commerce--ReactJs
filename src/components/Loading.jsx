@@ -1,8 +1,12 @@
+import { AbsoluteCenter } from "@chakra-ui/react"
+import loading from '../img/loading.gif'
+
 const Loading = ({setLoading}) => {
     
     return(
-        <>
-        cargando</>
+        <AbsoluteCenter>
+            <img src={loading} alt='loading...'/>
+        </AbsoluteCenter>
     )
 }
 
