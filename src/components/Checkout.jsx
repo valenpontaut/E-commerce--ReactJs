@@ -6,7 +6,7 @@ import { collection, getFirestore, addDoc} from "firebase/firestore";
 import { CartContext } from "../context/CartContext"
 import purchasesuccess from '../img/purchase-success.png'
 
-const FinishPurchase = () => {
+const Checkout = () => {
   const {cart, totalPrice} = useContext(CartContext)
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -131,4 +131,4 @@ const FinishPurchase = () => {
   )
 }
 
-export default FinishPurchase
+export default Checkout

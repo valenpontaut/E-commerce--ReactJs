@@ -8,7 +8,7 @@ import CartContextProvider from './context/CartContext';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import FindUs from './components/FindUs';
-import FinishPurchase from './components/FinishPurchase';
+import Checkout from './components/Checkout';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         <Route exact path='/aboutus' element={<AboutUs/>}/>
         <Route exact path='/contactus' element={<ContactUs/>}/>
         <Route exact path='/findus' element={<FindUs/>}/>
-        <Route exact path='/finishPurchase' element={<FinishPurchase/>}/>
+        <Route exact path='/checkout' element={<Checkout/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

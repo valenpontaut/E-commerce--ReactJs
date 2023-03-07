@@ -45,7 +45,7 @@ const Cart = () => {
         </div>
         <div className='cart__btn'>
           <button onClick={() => clear()} className='cart__btn__clear'>Clear cart</button>
-          <NavLink to={`/finishPurchase`}>
+          <NavLink to={`/checkout`}>
             <button className='cart__btn__continuePurchase' >
               Continue my purchase
             </button>
