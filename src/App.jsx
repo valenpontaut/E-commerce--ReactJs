@@ -4,7 +4,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from "./components/ItemListContainer"
 import NavBar from "./components/NavBar"
 import Cart from './components/Cart';
-import CartContextComp from './context/CartContextComp';
+import CartContextProvider from './context/CartContext';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import FindUs from './components/FindUs';
@@ -12,7 +12,7 @@ import FindUs from './components/FindUs';
 function App() {
   return (
     <>
-    <CartContextComp>
+    <CartContextProvider>
     <BrowserRouter> 
       <NavBar/>
       <Routes>
@@ -26,7 +26,7 @@ function App() {
       </Routes>
       <Footer/>
     </BrowserRouter>
-    </CartContextComp>
+    </CartContextProvider>
     </>
   )
 }

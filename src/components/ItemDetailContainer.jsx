@@ -12,16 +12,16 @@ const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
   
 
-  useEffect(() => {
-    const db = getFirestore();
-    const item = doc(db, "products", idprod);
-    getDoc (item).then((snapshot) => {
-      if (snapshot) {
-          const docs = snapshot.data();
-          setProduct(docs);
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   const db = getFirestore();
+  //   const item = doc(db, "products", idprod);
+  //   getDoc (item).then((snapshot) => {
+  //     if (snapshot) {
+  //         const docs = snapshot.data();
+  //         setProduct(docs);
+  //     }
+  //   });
+  // }, []);
 
   return (
     <Container className='body__Container'>
