@@ -31,14 +31,13 @@ const ItemDetail = ({item, id, name, artist, description, price, stock, category
             <Text className='itemDetail__card__headingName' >{name}</Text>
             <Text className='itemDetail__card__headingArtist'>{artist}</Text>
             <Text mt={3} >Format: {category}</Text>
+            <Text mb={3}>Stock: {stock}</Text>
             <Text className='itemDetail__card__description'>{description}</Text>
             <Text mt={3} color='#66999B' fontSize='3xl' textAlign={'center'}>${price}</Text>
           </CardBody>
         </Stack>
       </Card>
-      <ButtonGroup spacing='8' pt={5}>
-        <ItemCount w={'15rem'} stock={stock} idItem={id} onAdd={onAdd}/>
-      </ButtonGroup>
+      <ItemCount w={'15rem'} stock={stock} idItem={id} onAdd={onAdd}/>
     </Container>
   )
 }
