@@ -5,38 +5,43 @@ import { useParams } from 'react-router-dom'
 import { Container } from '@chakra-ui/react'
 import ItemDetail from './ItemDetail'
 import { doc, getDoc, getFirestore } from "firebase/firestore";
+import Loading from './Loading';
 
 const ItemDetailContainer = () => {
 
-  const idprod = useParams().id;
+  const {id}= useParams();
   const [product, setProduct] = useState([]);
-  
+  const [loading, setLoading] = useState(true);
+  const db = getFirestore();
 
-  // useEffect(() => {
-  //   const db = getFirestore();
-  //   const item = doc(db, "products", idprod);
-  //   getDoc (item).then((snapshot) => {
-  //     if (snapshot) {
-  //         const docs = snapshot.data();
-  //         setProduct(docs);
-  //     }
-  //   });
-  // }, []);
-
+  useEffect(() => {
+    async function fetchData() {
+      const querySnapshot = await getDoc(doc(db, "products",id));
+      setProduct({id: querySnapshot.id, ...querySnapshot.data()});
+      setLoading(false)
+    }
+    fetchData();
+  }, []);
   return (
+    <>
     <Container className='body__Container'>
+    {loading ? 
+      <Loading/>
+    :
       <ItemDetail
-        item={product} 
-        key={product.id}
-        id={product.id}
-        name={product.name}
-        artist={product.artist}
-        description={product.description}
-        price={product.price}
-        stock={product.stock}
-        category={product.category}
-        img={product.img}/>
+      item={product} 
+      key={product.id}
+      id={product.id}
+      name={product.name}
+      artist={product.artist}
+      description={product.description}
+      price={product.price}
+      stock={product.stock}
+      category={product.category}
+      img={product.img}/> 
+    }
     </Container>
+    </>
   )
 }
 
