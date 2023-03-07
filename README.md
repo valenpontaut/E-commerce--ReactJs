@@ -1,22 +1,32 @@
 # Página de E-commerce con React Js
-## Segunda Pre-entrega del proyecto final del curso de React Js de CoderHouse
+## Proyecto final del curso de React Js organizado por CoderHouse 
 Alumna: Valentina Llanos Pontaut <br><br>
-Para el presente proyecto se me ocurrió crear una página que venda productos como CD's, vinilos, DVD's y libros de música. El nombre de la tienda será "Myousic".<br>
-Para esta segunda pre-entrega se cumplió con las siguientes consignas:<br>
-- Crear un componente ItemCount.jsx, que debe estar compuesto de un botón y controles, para incrementar y decrementar la cantidad requerida de ítems:
-  - El número contador nunca puede superar el stock disponible
-  - De no haber stock el click no debe tener efecto y por ende no ejecutar el callback onAdd
-  - Si hay stock al clickear el botón se debe ejecutar onAdd con un número que debe ser la cantidad seleccionada por el usuario
-- Crea los componentes Item.jsx e ItemList.jsx para mostrar algunos productos en tu ItemListContainer.jsx:
-  - Item.jsx es un componente destinado a mostrar información breve del producto que el user clickeará luego para acceder a los detalles
-  - ItemList.jsx es un agrupador de un set de componentes Item.jsx
-- Los ítems deben provenir de un llamado a una promise que los resuelva en tiempo diferido (setTimeout) de 2 segundos, pars emular retrasos de red
-- Crear un componente ItemDetailContainer.jsx con la misma premisa que ItemListContainer.jsx
-- Al iniciar utilizando un efecto de montaje, debe llamar a un async mock que en 2 segundos le devuelva un ítem, y lo guarde en un estado prop
-- Crear un componente ItemDetail.jsx que deberá mostrar la vista de detalle de un ítem incluyendo su descripción, una foto y el precio
-- Rutas a configurar:
-  - ´/´ navega a ItemListContainer
-  - ´/category/:id´ navega a ItemListContainer
-  - ´/item/:id´ navega a ItemDetailContainer
+Para el presente proyecto se me ocurrió crear una página que venda productos como CD's, vinilos, DVD's y libros de música. El nombre de la tienda es "Myousic".<br>
+Tiene 4 categorías de productos disponible: DVD's, CD's, vinilos y libros. Se puede navegar por el catálogo y filtrar los productos por categoría. <br>
+Está la opción de ver sus detalles, elegir una cantidad de estos mismos y agregarlos al carrito. En el carrito se podrán ver todos los productos agregados, el precio total, editar si se quiere eliminar productos de la compra o bien vaciar todo el carrito. <br>
+Una vez decidida la compra, se procede a finalizarla. Para ello el usuario debe completar un formulario con sus datos que será registrado en la base de datos de firebase, junto a la orden de productos que seleccionó, la fecha y la hora.<br>
+Por último, si la compra fue exitosa se le otorga un id al usuario que acredita que todo salió con éxito. <br>
+- Comando para ejecutar el proyecto: npm run dev
+- Librería utilizada: Chakra UI
+- Base de datos NOSQL: Firebase
+- Configuración de rutas: react-router-dom
+- Paquetes instalados:
+  - @chakra-ui/icons@2.0.17
+  - @chakra-ui/react@2.4.9
+  - @emotion/react@11.10.5
+  - @emotion/styled@11.10.5
+  - @types/react-dom@18.0.10
+  - @types/react@18.0.27
+  - @vitejs/plugin-react@3.0.1
+  - data@0.6.1
+  - firebase@9.17.2
+  - framer-motion@8.5.3
+  - get@1.4.0
+  - react-dom@18.2.0
+  - react-icons@4.7.1
+  - react-router-dom@6.8.1
+  - react@18.2.0
+  - vite@4.0.4
+<br>
 
-![gif](/src/Myousic-Google-Chrome-2023-02-11-13-30-41.gif)
+![gif](/src/Myousic-gif.gif)
