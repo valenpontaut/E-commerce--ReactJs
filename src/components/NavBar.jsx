@@ -15,9 +15,22 @@ import {
   MenuItem,
 } from '@chakra-ui/react'
 import { NavLink, Link} from "react-router-dom"
-import {ChevronDownIcon} from '@chakra-ui/icons'
+import { ChevronDownIcon } from '@chakra-ui/icons'
+import { useState, useEffect } from "react"
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 const NavBar = () => {
+  const [category,setCategory] = useState([])
+  const db = getFirestore();
+
+  useEffect(() => {
+    async function fetchData() {
+      const querySnapshot = await getDocs(collection(db, "categories"));
+      setCategory(querySnapshot.docs.map((doc) => doc.data().category));
+    }
+    fetchData();
+  }, []);
+  
   return (
     <>
     <Container bg='#0D1821' maxW={'100vw'}>
@@ -37,10 +50,8 @@ const NavBar = () => {
                   Our products
                 </MenuButton>
                 <MenuList>
-                  <NavLink to={`/category/${'CD'}`}><MenuItem>CD's</MenuItem></NavLink>
-                  <NavLink to={`/category/${'Vinyl'}`}><MenuItem>Vinyls</MenuItem></NavLink>
-                  <NavLink to={`/category/${'DVD'}`}><MenuItem>DVD's</MenuItem></NavLink>
-                  <NavLink to={`/category/${'Book'}`}><MenuItem>Books</MenuItem></NavLink>
+                  {category?.map((cat) =>
+                    (<NavLink key={cat} to={`/category/${cat}`}><MenuItem>{cat}s</MenuItem></NavLink>))}
                 </MenuList>
               </Menu>
               <Link to={`/findUs`}>
