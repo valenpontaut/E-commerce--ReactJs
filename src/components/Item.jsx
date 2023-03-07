@@ -32,7 +32,7 @@ const Item = ({id, name, artist, price, category, img}) => {
           </Stack>
         </CardBody>
         <NavLink to={`/item/${id}`}>
-          <Button  bg='#B3AF8F' color={'#645537'} fontSize={'1.2rem'} borderRadius={'0'} w={'15rem'} h={'3.5rem'}>
+          <Button  bg='#B3AF8F' fontSize={'1.1rem'} borderRadius={'0'} w={'15rem'} h={'3rem'}>
             + Details
           </Button>
         </NavLink>
