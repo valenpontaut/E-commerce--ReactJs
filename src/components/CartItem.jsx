@@ -1,6 +1,6 @@
-import { Container, Card, Image, Stack, CardBody, Heading, Text, Center, Box, Button} from '@chakra-ui/react'
+import { Image, Text, Center, Box} from '@chakra-ui/react'
 
-const CartItem = ({item, id, name, artist, description, price, stock, category, img, amount, remove}) => {
+const CartItem = ({ id, name, artist, price, img, amount, remove}) => {
   return (
     
     <div className='cartItem__div'>
@@ -10,8 +10,12 @@ const CartItem = ({item, id, name, artist, description, price, stock, category, 
                 <Text fontSize={'1.5rem'} fontWeight={'bold'} pl={'2'} >{name} - {artist} </Text>
             </Box>
             <Box className='cartItem__card__rightBox'>
-                <Text >{amount} x ${price}</Text>
-                <Button onClick={() => remove(id) } m={'4'}>Remove from Cart</Button>
+                <Text className='cartItem__card__rightBox__amountxprice'>{amount} x ${price}</Text>
+                <button onClick={() => remove(id) } m={'4'} className='cartItem__card__rightBox__deleteBtn'>
+                  <Center>
+                    <span className="material-symbols-outlined" id='cartItem__card__rightBox__deleteIcon'>delete</span>
+                  </Center>
+                </button>
             </Box>
         </div>
     </div>
