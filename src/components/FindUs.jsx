@@ -1,4 +1,4 @@
-import React from 'react'
+//Component that shows information about where to find the e-commerce
 
 const FindUs = () => {
   return (

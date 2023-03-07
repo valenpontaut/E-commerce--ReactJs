@@ -1,4 +1,4 @@
-/*The CartWidget component is the cart icon in the navbar placed at the top-right*/
+//The CartWidget component is the cart icon in the navbar placed at the top-right
 
 import { CartContext } from "../context/CartContext"
 import { useContext } from "react"

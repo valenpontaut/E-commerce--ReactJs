@@ -1,14 +1,6 @@
-/*The ItemDetail component is a card of the selected product details*/
+//The ItemDetail component is a card of the selected product details
 
-import { 
-  Container, 
-  Stack, 
-  Card, 
-  CardBody, 
-  ButtonGroup, 
-  Text, 
-  Image
-} from '@chakra-ui/react'
+import { Container, Stack, Card, CardBody, Text, Image } from '@chakra-ui/react'
 import ItemCount from './ItemCount'
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'

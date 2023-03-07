@@ -1,4 +1,4 @@
-import React from 'react'
+//Component that shows information about the e-commerce, their goals and aspirations
 
 const AboutUs = () => {
   return (

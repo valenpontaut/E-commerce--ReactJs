@@ -1,4 +1,5 @@
-import React, { createContext, useState } from 'react';
+// The CartContext creates the context for the management of the products added to cart
+import { createContext, useState } from 'react';
 export const CartContext = createContext(null);
 
 const CartContextProvider = ({children}) => {

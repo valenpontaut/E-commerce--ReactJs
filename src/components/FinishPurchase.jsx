@@ -1,5 +1,6 @@
+//The FinishPurchase components contains a form that is going to be used to send the information of the buyer to firebase with the rest of the order
+
 import { Link } from 'react-router-dom';
-import { Container, Button } from '@chakra-ui/react'
 import { useState, useContext } from 'react';
 import { collection, getFirestore, addDoc} from "firebase/firestore";
 import { CartContext } from "../context/CartContext"
@@ -19,16 +20,15 @@ const FinishPurchase = () => {
   const [termsAgreed, setTermsAgreed] = useState(false);
   const [orderId, setOrderId] = useState(null)
   const [error, setError] = useState('')
-
-  const db = getFirestore();
-  const ordersCollection = collection(db, "orders");
-  
   const newDate = new Date()
   const date = newDate.getDate();
   const month = newDate.getMonth()+1;
   const year = newDate.getFullYear();
   const hours = newDate.getHours();
   const minutes = newDate.getMinutes();
+
+  const db = getFirestore();
+  const ordersCollection = collection(db, "orders");
   const order = {
     buyer: {name:firstName, lastname:lastName, email:email, phone:phone, address:address, city:city, state:state, postalCode:postalCode, country:country},
     items: cart.map(item => ({id:item.id, title:item.name, artist:item.artist, category:item.category, price:item.price, amount:item.amount})),
@@ -39,25 +39,23 @@ const FinishPurchase = () => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-
     (firstName === '' || lastName === '' || email === '' || phone === '' || address === '' || city === '' || state === '' || postalCode === '' || country === '') ?
       setError('All the fields must be completed')
     :
     (termsAgreed ?
       addDoc(ordersCollection, order).then(({id}) => setOrderId(id)) && setError('')
-      
       :
       setError('Must accept our terms and conditions')
     )
   }
-  console.log('error?:',error)
+
   return(
     <>
     {(orderId === null) ?
     <div className='body__Container'>
         <form onSubmit={handleSubmit}>
           <div className='finishPurchase__divContainer'>
-              <div>
+            <div>
               <legend className='finishPurchase__divContainer__legend__text'>Personal Information</legend>
               <div>
                 <div><label className='finishPurchase__divContainer__form__label'>First Name:</label></div>
@@ -116,7 +114,7 @@ const FinishPurchase = () => {
           </div>
         </form>
     </div>
-  :
+    :
     <div className='body__Container'>
       <div className='finishPurchase__successPurchase__container'>
         <img className='finishPurchase__successPurchase__img' src={purchasesuccess}/>
@@ -128,10 +126,9 @@ const FinishPurchase = () => {
         </div>
       </div>
     </div>
-  }
+    }
     </>
   )
-
 }
 
 export default FinishPurchase

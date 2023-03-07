@@ -1,4 +1,4 @@
-/*The ItemCount component is a button included in the Item and ItemDetail component. It doesn't show negative values or a number superior to the available stock*/
+//The ItemCount component is a button included in the Item and ItemDetail component. It doesn't show negative values or a number superior to the available stock
 
 import { useToast } from '@chakra-ui/react';
 import { useState } from 'react';

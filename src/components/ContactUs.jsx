@@ -1,4 +1,4 @@
-import React from 'react'
+//Component that shows information about how to reach with every area of the e-commerce
 
 const ContactUs = () => {
   return (
@@ -28,7 +28,6 @@ const ContactUs = () => {
           Thank you for choosing Myousic. We look forward to hearing from you!
         </div>
       </div>
-      
     </div>
   )
 }
